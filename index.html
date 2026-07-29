@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oleksii Grygorchuk — Senior Software Engineer</title>
+<style>
+  :root {
+    --ink: #1a1a2e;
+    --sub: #4b3f8f;
+    --muted: #666;
+    --line: #e3e0f5;
+    --chip-bg: #f2f0fa;
+    --bg: #fdfdff;
+    --card: #ffffff;
+    --accent: #6c5ce7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #f0f0f5;
+      --sub: #b3a6ff;
+      --muted: #aaa;
+      --line: #333350;
+      --chip-bg: #24243a;
+      --bg: #14141f;
+      --card: #1b1b2b;
+      --accent: #9b8cff;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    margin: 0;
+    padding: 0;
+  }
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+  header {
+    margin-bottom: 32px;
+  }
+  h1 {
+    font-size: 2rem;
+    margin: 0 0 4px 0;
+    letter-spacing: -0.02em;
+  }
+  .role {
+    font-size: 1.05rem;
+    color: var(--sub);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .contact a, .contact span {
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-decoration: none;
+    background: var(--chip-bg);
+    border-radius: 20px;
+    padding: 5px 12px;
+  }
+  .contact a:hover { color: var(--accent); }
+  section { margin-top: 34px; }
+  h2 {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--sub);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 6px;
+    margin: 0 0 14px 0;
+  }
+  p.summary {
+    line-height: 1.65;
+    font-size: 0.98rem;
+    color: var(--ink);
+  }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 8px 16px;
+    font-size: 0.92rem;
+  }
+  .skills-grid dt {
+    color: var(--sub);
+    font-weight: 600;
+  }
+  .skills-grid dd {
+    margin: 0;
+    color: var(--ink);
+  }
+  .process-list {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    display: grid;
+    gap: 10px;
+  }
+  .process-list li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+  .process-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .job {
+    margin-bottom: 26px;
+    padding-bottom: 4px;
+  }
+  .job-title {
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .job-dates {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .proj {
+    font-weight: 600;
+    font-size: 0.92rem;
+    margin: 12px 0 2px 0;
+    color: var(--ink);
+  }
+  .proj-note {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--muted);
+    margin: 0 0 6px 0;
+  }
+  ul.bullets {
+    margin: 4px 0 0 0;
+    padding-left: 18px;
+  }
+  ul.bullets li {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    margin: 3px 0;
+  }
+  .edu-item, .intern-item {
+    margin-bottom: 14px;
+  }
+  .edu-title { font-weight: 600; font-size: 0.95rem; }
+  .edu-sub { font-size: 0.82rem; color: var(--muted); }
+  .langs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .lang-chip {
+    background: var(--chip-bg);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 24px;
+  }
+  footer {
+    margin-top: 48px;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+  @media print {
+    body { background: white; }
+    .wrap { max-width: 100%; padding: 0 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Oleksii Grygorchuk</h1>
+    <div class="role">Senior Software Engineer</div>
+    <div class="contact">
+      <span>Würzburg, Germany</span>
+      <a href="mailto:alekseymanhbm@gmail.com">alekseymanhbm@gmail.com</a>
+      <span>GMT+1 / GMT+2 (CET/CEST)</span>
+    </div>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <p class="summary">
+      Senior full-stack engineer (7+ years) with deep TypeScript/Node.js and React expertise,
+      proven end-to-end ownership of a national-scale production system for 3.5+ years, and a
+      disciplined AI-assisted development process built around Claude Code: plan before
+      multi-file changes, execute autonomously against an approved plan, and never call
+      anything &ldquo;done&rdquo; without a concrete verification step &mdash; never trust an agent&rsquo;s
+      self-report. Actively extending that discipline into Python/FastAPI and LangGraph/RAG
+      agent systems through hands-on pet projects, on top of a strong Node.js/TypeScript
+      backend foundation that transfers directly.
+    </p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <dl class="skills-grid">
+      <dt>Frontend</dt><dd>React, TypeScript, Angular, Vue.js, JavaScript, HTML5, CSS3</dd>
+      <dt>Backend</dt><dd>Node.js, PHP, Symfony, C#, Python/FastAPI (working knowledge)</dd>
+      <dt>Data</dt><dd>PostgreSQL, MySQL, MongoDB, TypeORM</dd>
+      <dt>AI engineering</dt><dd>Claude Code, Cursor, LangGraph &amp; RAG/vector DB (pet-project level)</dd>
+      <dt>DevOps</dt><dd>Docker, Git, CI/CD</dd>
+      <dt>Practice</dt><dd>Spec-driven development, plan-then-execute, verification-before-&ldquo;done&rdquo;, mentoring</dd>
+    </dl>
+  </section>
+
+  <section class="card">
+    <h2 style="border:none; margin-bottom:12px;">AI-Assisted Development Process</h2>
+    <ul class="process-list">
+      <li>Multi-file or risky changes go through a plan step first; execution then runs autonomously against the approved plan, not per-action confirmation.</li>
+      <li>Hard rule: nothing is reported complete without naming the concrete check that proves it — a test run, a diff, a log line.</li>
+      <li>Persistent, file-based memory across sessions so context and decisions survive between work sessions.</li>
+      <li>Actively guards against AI confidently claiming unverified success and quiet scope creep — caught by verification, not by trusting the agent's report.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Employment History</h2>
+
+    <div class="job">
+      <div class="job-title">Software Engineer — Qvest Engage GmbH (formerly TeraVolt), Hamburg</div>
+      <div class="job-dates">December 2021 — Present</div>
+
+      <div class="proj">Product for one of Germany's largest public television broadcasters</div>
+      <p class="proj-note">Previous, current and new versions — owned architecture and delivery for 3.5+ years, national-scale audience.</p>
+      <ul class="bullets">
+        <li>Launched the new version of the product; architected and delivered release-critical features with direct business impact</li>
+        <li>Improved app performance on the slowest use-cases by 50%, driving higher user satisfaction and viewership</li>
+        <li>Expanded the supported device base by 4%, rolling out support for 7 additional platforms</li>
+        <li>Continuously owned the applications extending the product plus the previous version and its backend-for-frontend aggregation layer</li>
+      </ul>
+
+      <div class="proj">Product for a German TV news channel</div>
+      <ul class="bullets">
+        <li>Established code documentation at 100% coverage, cutting future budget and improving development quality</li>
+        <li>Ran requirements analysis, selected the technology stack, and identified reusable components across teams</li>
+        <li>Took the project from requirements to early development, communicating directly with stakeholders</li>
+      </ul>
+
+      <div class="proj">Two products for a leading German communications group</div>
+      <ul class="bullets">
+        <li>Took over project #1 from an early development phase and led it to launch</li>
+        <li>Coordinated and mentored a team of 2 engineers</li>
+        <li>Delivered key features and resolved critical production issues, working directly with a part-time lead developer and stakeholders</li>
+        <li>Led stabilization of a feature-incomplete legacy codebase to release readiness</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-title">Software Engineer — snapADDY GmbH, Würzburg</div>
+      <div class="job-dates">November 2020 — November 2021</div>
+      <ul class="bullets">
+        <li>Released and stabilized the "Visit Report" and "BusinessCardScanner" products for production</li>
+        <li>Helped grow the user base by 9% through performance improvements</li>
+        <li>Contributed to defining a continuous release strategy within German agile workflows</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-title">Working Student — iWelt GmbH + Co. KG, Eibelstadt</div>
+      <div class="job-dates">May 2019 — March 2020</div>
+      <ul class="bullets">
+        <li>Developed and maintained WordPress-based websites</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-title">JavaScript/Node.js/PHP Developer — Freelance, Kharkiv, Ukraine</div>
+      <div class="job-dates">September 2015 — September 2017</div>
+      <ul class="bullets">
+        <li>Built UI components and internal web applications (dashboards, form-heavy interfaces) with vanilla JS/HTML5/CSS3</li>
+        <li>Integrated frontend with a Node.js-based REST API; contributed to a web-based video catalog with search and playback</li>
+        <li>Managed small-scale development cycles independently, end to end, working directly with clients</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="edu-item">
+      <div class="edu-title">Bachelor of Science in E-Commerce</div>
+      <div class="edu-sub">Hochschule für angewandte Wissenschaften Würzburg-Schweinfurt · Oct 2017 — Mar 2022</div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-title">Bachelor of Engineering in Computer Engineering</div>
+      <div class="edu-sub">National Technical University "Kharkiv Polytechnic Institute" · Sep 2015 — Jun 2019 (completed remotely after relocating to Germany)</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Internship</h2>
+    <div class="intern-item">
+      <div class="edu-title">iWelt GmbH + Co. KG, Eibelstadt</div>
+      <div class="edu-sub">March 2020 — September 2020</div>
+      <p class="summary" style="font-size:0.9rem;">Designed and developed plug-ins and themes for the Shopware 6 shop system using Vue.js and Symfony.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Languages</h2>
+    <div class="langs">
+      <span class="lang-chip">German — C1</span>
+      <span class="lang-chip">English — B2</span>
+      <span class="lang-chip">Ukrainian — native</span>
+      <span class="lang-chip">Russian — native</span>
+    </div>
+  </section>
+
+  <footer>Last updated 2026-07-29</footer>
+</div>
+</body>
+</html>
